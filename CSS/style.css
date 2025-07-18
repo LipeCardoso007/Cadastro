@@ -52,6 +52,11 @@ h3{
 
 }
 
+h2{
+    color: white;
+    text-align: center;
+}
+
 #bnt-whatsapp{
     height: 50%;
     width: auto;
@@ -138,6 +143,7 @@ input,select{
     width: 85dvw;
     flex-direction: column;
     height: auto;
+    gap: 2px;
     padding: 5%;
     border-radius: 12px;
     justify-content: center;
