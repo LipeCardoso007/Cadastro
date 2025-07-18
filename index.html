@@ -33,10 +33,6 @@
           <input type="text" id="nome" name="nome" required>
         </li>
         <li>
-          <label for="email">E-mail:</label>
-          <input type="email" id="email" name="email" required>
-        </li>
-        <li>
           <label for="cpf">CPF:</label>
           <input type="text" id="cpf" name="cpf" required pattern="\d{11}" placeholder="Apenas números">
         </li>
@@ -45,7 +41,7 @@
           <input type="tel" id="contato" name="contato" required>
         </li>
         <li>
-          <label for="cidade">Mora onde?</label>
+          <label for="cidade">Cidade</label>
           <select id="cidade" name="cidade" onchange="mostrarCampoOutraCidade(this)">
             <option value="Selecione...">Selecione...</option>
             <option value="Presidente Medici">Presidente Medici</option>
@@ -62,14 +58,20 @@
   </div>
 
   <div id="vdh" class="box-do-cadastro">
+
+    <h2>Escolha o brinde do sorteio:</h2>
     
     <form>
 
         <li placeholde="Contário">
     
-            <label for="textt">Comente algo para a gente!:</label>
-    
-            <input type="text">
+            <select id="cidade" name="cidade" onchange="mostrarCampoOutraCidade(this)">
+            <option value="select">Selecione...</option>
+            <option value="vale">Vale Compra R$ 25,00</option>
+            <option value="calcinha">Vale Calcinha</option>
+            <option value="calcinha">Vale Cueca</option>
+
+          </select>
 
         </li>
 
