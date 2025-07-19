@@ -110,6 +110,8 @@ h2{
 
 form{
     width: 100%;
+    align-items: center;
+    justify-content: center;
 }
 ol{
     width: 100%;
@@ -178,4 +180,8 @@ footer{
 
 #bnt1{
     color: white;
+    border: none;
+    background-color: rgb(89, 163, 89);
+    border-radius: 8px;
+    padding: 3%;
 }
