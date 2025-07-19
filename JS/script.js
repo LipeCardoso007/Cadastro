@@ -25,11 +25,28 @@ function validarCPF(cpf) {
   return true;
 }
 
-const form = document.getElementById("formulario");
-const urlAppsScript =
-  "https://script.google.com/macros/s/AKfycbyUxRCCgo-dZsF2A95S7F-gfTZohvbMWFb2sk8gFVOArBJ4_f9vPyDij44RGzOyG86peA/exec";
+const cpfInput = document.getElementById("cpf");
 
-form.addEventListener("submit", async function handler(e) {
+cpfInput.addEventListener("input", function (e) {
+  let v = e.target.value;
+
+  // Remove tudo que não é número
+  v = v.replace(/\D/g, "");
+
+  // Limita a 11 dígitos
+  v = v.slice(0, 11);
+
+  // Aplica a máscara
+  v = v.replace(/(\d{3})(\d)/, "$1.$2");
+  v = v.replace(/(\d{3})(\d)/, "$1.$2");
+  v = v.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+
+  e.target.value = v;
+});
+
+const form = document.getElementById("formulario");
+
+form.addEventListener("submit", function (e) {
   e.preventDefault();
 
   const cpfInput = document.getElementById("cpf");
@@ -57,26 +74,18 @@ form.addEventListener("submit", async function handler(e) {
     }
   }
 
-  try {
-    const response = await fetch(urlAppsScript, {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams({ cpf }),
-    });
-
-    const result = await response.json();
-
-    if (result.success === false) {
-      alert(result.message);
-      return;
-    } else if (result.success === true) {
-      form.removeEventListener("submit", handler);
-      form.submit();
-    } else {
-      alert("Resposta inesperada do servidor.");
-    }
-  } catch (err) {
-    alert("Erro ao validar o CPF. Tente novamente mais tarde.");
-    console.error(err);
-  }
+  // Tudo ok, remove o listener e envia o formulário
+  form.removeEventListener("submit", arguments.callee);
+  form.submit();
 });
+
+function formatarTelefone(input) {
+  let tel = input.value.replace(/\D/g, ""); // Remove tudo que não for número
+
+  if (tel.length > 11) tel = tel.slice(0, 11);
+
+  if (tel.length >= 2) tel = `(${tel.slice(0, 2)}) ${tel.slice(2)}`;
+  if (tel.length >= 8) tel = `${tel.slice(0, 10)}-${tel.slice(10)}`;
+
+  input.value = tel;
+}
