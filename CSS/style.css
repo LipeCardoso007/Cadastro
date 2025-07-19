@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
 }
-
 html, body {
   overflow-y: auto;
 }
@@ -19,6 +18,7 @@ header{
     gap: 5px;
     background-color: #d62c3a;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    z-index: 99999;
 }
 
 body{
@@ -137,6 +137,10 @@ input,select{
     padding: 4px;
 }
 
+#campo-outra-cidade{
+    gap: 50px;
+}
+
 .box-do-cadastro{
     position: relative;
     display: flex;
@@ -162,32 +166,12 @@ input,select{
 }
 
 footer{
-    display: flex;
-    position: fixed;
-    bottom: 0;
-    height: 10dvh;
-    width: 100%;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #d41424;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-}
-
-.bnt-footer{
-    background-color: #e0868d;
-    height: 65%;
-    width: 45%;
-    color: white;
-    border-radius: 14px;
-    padding: 5px;
-    border: none;
-}
-
-#bnt2{
-    background-color: rgb(214, 87, 87);
-
-}
-
-#bnt1{
-    background-color: #73c06b;
+    font-size: 0.75rem;
+    color: #666;
+    text-align: center;
+    padding: 1rem;
+    max-width: 600px;
+    margin: 2rem auto 1rem;
+    line-height: 1.4;
+    text-align: justify;
 }
