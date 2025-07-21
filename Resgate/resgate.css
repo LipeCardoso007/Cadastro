@@ -16,7 +16,7 @@ header{
 
 #box-lumodas3{
     display: flex;
-    width: 40%;
+    width: 45%;
     height: 100%;
     justify-content: space-around;
     align-items: center;
@@ -24,7 +24,7 @@ header{
 
 #box-lumodas4{
     display: flex;
-    width: 60%;
+    width: 55%;
     height: 100%;
     padding-left: 2dvw;
 }
