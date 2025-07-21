@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OBRIGADO</title>
+</head>
+<body>
+    
+    <div>
+        <h1 id="boasVindas">Bem-vindo(a)!</h1>
+        <h2>apresente-se na lumoda intima para retirar o seu brinde!</h2>
+        <h2>prazo de resgate encerra dia 01/08/2025</h2>
+        <h3>Lembre-se: só sera gerado cupom apenas para o 1º cadastro. outros cadastros iguais nao serao considerados</h3>
+    </div>
+
+
+    <script>
+  const nome = localStorage.getItem("nomeCadastro");
+  if (nome) {
+    document.getElementById("boasVindas").textContent = `Olá, ${nome}! Seu cadastro foi enviado com sucesso.`;
+  } else {
+    document.getElementById("boasVindas").textContent = `Olá!`;
+  }
+  </script>
+</body>
+</html>

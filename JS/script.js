@@ -89,3 +89,8 @@ function formatarTelefone(input) {
 
   input.value = tel;
 }
+
+document.getElementById("formulario").addEventListener("submit", function () {
+  const nome = document.getElementById("nome").value;
+  localStorage.setItem("nomeCadastro", nome);
+});
