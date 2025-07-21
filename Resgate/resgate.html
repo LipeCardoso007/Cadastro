@@ -1,27 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OBRIGADO</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OBRIGADO</title>
+  <link rel="stylesheet" href="resgate.css" />
 </head>
 <body>
-    
-    <div>
-        <h1 id="boasVindas">Bem-vindo(a)!</h1>
-        <h2>apresente-se na lumoda intima para retirar o seu brinde!</h2>
-        <h2>prazo de resgate encerra dia 01/08/2025</h2>
-        <h3>Lembre-se: só sera gerado cupom apenas para o 1º cadastro. outros cadastros iguais nao serao considerados</h3>
+  <header>
+    <div id="box-lumodas4">
+      <img
+        id="lumo"
+        src="Feliz dia das mães flores aquarela simples marsala instagram story.png"
+        alt="Lu Moda Íntima"
+      />
     </div>
 
+    <div id="box-lumodas3">
+      <button class="bnt-heder" onclick="window.open('https://wa.me/556999368692')">
+        WhatsApp
+      </button>
+      <button class="bnt-heder">Instagram</button>
+    </div>
+  </header>
 
-    <script>
-  const nome = localStorage.getItem("nomeCadastro");
-  if (nome) {
-    document.getElementById("boasVindas").textContent = `Olá, ${nome}! Seu cadastro foi enviado com sucesso.`;
-  } else {
-    document.getElementById("boasVindas").textContent = `Olá!`;
-  }
+  <div id="obg">
+    <h1 id="boasVindas">Bem-vindo(a)!</h1>
+    <h1>Cupom enviado</h1>
+    <h1>Boa sorte!</h1>
+    <h2>Apresente-se na lumoda intima para retirar o seu brinde!</h2>
+    <h2>Prazo de resgate encerra dia 01/08/2025</h2>
+    <h4>
+      Lembre-se: Só sera gerado cupom apenas para o 1º cadastro. outros cadastros iguais nao serao considerados
+    </h4>
+    <button id="compartilhar">Compartilhar Link</button>
+  </div>
+
+  <script>
+    const nome = localStorage.getItem("nomeCadastro");
+    if (nome) {
+      document.getElementById("boasVindas").textContent = `Olá, ${nome}! Seu cadastro foi enviado com sucesso.`;
+    } else {
+      document.getElementById("boasVindas").textContent = `Olá!`;
+    }
   </script>
 </body>
 </html>
