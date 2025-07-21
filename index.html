@@ -20,11 +20,8 @@
     </div>
 
     <div id="box-lumodas2">
-    
       <button id="bnt-whatsapp" onclick="window.open('https://wa.me/556999368692')">WhatsApp</button>
-
       <button id="bnt-instagram">Instagram</button>
-
     </div>
   </header>
 
@@ -33,17 +30,23 @@
     <h1>PREENCHA PARA CONCORRER</h1>
     <h3>1 Baby Doll</h3>
     <h4>Sorteio no dia 31/07</h4>
-
   </div>
 
   <div id="box-do-cadastro" class="box-do-cadastro">
     <div id="cor"></div>
+
     <form action="https://formsubmit.co/felipe11gc@gmail.com" method="POST" id="formulario">
+      <!-- Desativa o captcha -->
+      <input type="hidden" name="_captcha" value="false">
+      <!-- Redireciona após o envio -->
+      <input type="hidden" name="_next" value="https://seusite.com/resgate.html">
+
       <ol>
         <li>
           <label for="nome">Nome completo:</label>
           <input placeholder="Digite aqui..." type="text" id="nome" name="nome" required />
         </li>
+
         <li>
           <label for="cpf">CPF:</label>
           <input
@@ -55,10 +58,19 @@
             maxlength="14"
           />
         </li>
+
         <li>
           <label for="contato">Contato (WhatsApp ou telefone):</label>
-          <input type="tel" id="telefone" name="telefone" placeholder="(00) 0 0000-0000" required oninput="formatarTelefone(this)">
+          <input
+            type="tel"
+            id="telefone"
+            name="telefone"
+            placeholder="(00) 0 0000-0000"
+            required
+            oninput="formatarTelefone(this)"
+          />
         </li>
+
         <li>
           <label for="cidade">Cidade:</label>
           <select id="cidade" name="cidade" onchange="mostrarCampoOutraCidade(this)" required>
@@ -68,10 +80,12 @@
             <option value="outra">Outra cidade</option>
           </select>
         </li>
-        <li id="campo-outra-cidade" style="display:none;">
+
+        <li id="campo-outra-cidade" style="display: none;">
           <label for="outraCidade">Digite sua cidade:</label>
           <input type="text" id="outraCidade" name="outraCidade" />
         </li>
+
         <li>
           <label for="brinde">Escolha seu brinde:</label>
           <select id="brinde" name="brinde" required>
@@ -91,27 +105,23 @@
     <p>Este site é exclusivo para cadastro na promoção da Lu Moda Íntima. Nenhum dado será compartilhado com terceiros.</p>
 
     <p>
-      No momento do cadastro, o participante escolhe qual prêmio deseja concorrer: um vale-compra de R$ 25 (em forma de desconto),
-      uma calcinha ou uma cueca.
+      Ao finalizar o cadastro, o participante poderá resgatar um brinde: uma calcinha, uma cueca ou um vale-desconto de R$ 25 para usar na loja.
     </p>
 
     <p>
-      Apenas os participantes sorteados terão direito ao prêmio. Os prêmios devem ser retirados presencialmente na loja em até 15
-      dias após o sorteio.
+      Além disso, haverá um sorteio especial de um <strong>babydoll</strong> no dia <strong>31 de julho de 2025</strong>. Todos os cadastrados concorrem automaticamente.
     </p>
 
     <p>
-      O vale-compra de R$ 25 é um cupom de desconto exclusivo para uso na loja e não possui valor em dinheiro.
+      O resgate dos brindes deve ser feito presencialmente na loja, logo após o cadastro. O sorteio do babydoll terá o resultado divulgado no Instagram oficial.
     </p>
 
     <p>
-      O sorteio será realizado no dia <strong>10 de agosto de 2025</strong>. Os ganhadores serão divulgados no Instagram oficial da
-      loja.
+      O vale-desconto de R$ 25 é exclusivo para uso na loja e não possui valor em dinheiro.
     </p>
 
     <p>
-      Promoção válida apenas para moradores de Presidente Médici, Ji‑Paraná e região. Maiores de 16 anos. Cada pessoa pode participar
-      uma única vez; cadastros duplicados serão desconsiderados.
+      Promoção válida apenas para moradores de Presidente Médici, Ji‑Paraná e região. Permitida a participação de maiores de 16 anos. Cada pessoa pode se cadastrar apenas uma vez; cadastros duplicados serão desconsiderados.
     </p>
 
     <p>
@@ -123,9 +133,9 @@
       <a href="https://instagram.com/seuperfil" target="_blank" style="color: #d15c65; text-decoration: none;">Instagram</a>.
     </p>
 
-      <p style="font-size: 12px; text-align: center; color: #888;">
-    Powered by <a href="https://formsubmit.co/" target="_blank" rel="noopener noreferrer">Formsubmit</a>
-  </p>
+    <p style="font-size: 12px; text-align: center; color: #888;">
+      Powered by <a href="https://formsubmit.co/" target="_blank" rel="noopener">FormSubmit</a>
+    </p>
   </footer>
 
   <script src="JS/script.js"></script>
